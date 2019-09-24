@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> 
+   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <link rel="icon" href="../../favicon.ico">
+   <title>Simulador - Cybermonday 2019 Principal</title>
+   <!-- Bootstrap core CSS -->
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+   <link href="css/bootstrap-slider.css" rel="stylesheet">
+   <link href="css/style.css" rel="stylesheet">
+   <link href="css/animate.css"rel="stylesheet">
+</head>
+<body>
+   <div class="carousel-inner animated pulse">
+      <img src="img/background-auto.jpg" alt="background">
+   </div>
+   <div class="sobre">
+      <div class="container marginbottom40">
+         <div class="col-lg-12">
+            <div class="row">
+               <div class="col-xs-12 col-lg-3">
+                  <img class="img-responsive logo animated fadeInDown" src="img/logo.png" alt="Logo Principal" title="Logo Principal">
+               </div>
+               <!--<div class="col-xs-12 col-lg-9">
+                  <h2 style="font-size: 30px;font-weight: 300; padding-top:15px;" class="text-right blanco">Te ayudamos a cumplir tu sueño</h2>
+               </div>-->
+            </div>
+            <h2 class="featurette-heading blanco text-center" style="margin-top: 0;">¿Pensando en<br>cambiar el auto?</h2>    
+            <div class="col-lg-6 col-lg-offset-3">
+               <div class="animated fadeIn">
+                  <div class="fondosimulador">
+                     <div class="animated zoomInDown faster">
+                        <h4><span class="celeste">¿En cuánto tiempo quieres cambiar el auto?</span></h4>
+                        <input id="ex6" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="23" data-slider-step="1" data-slider-value="3"/>
+                        <span id="ex6CurrentSliderValLabel" style="font-size: 18px;">meses: <span class="celeste" id="ex6SliderVal">1</span></span>
+                     </div>
+                     <div class="animated zoomInDown fast">
+                        <h4><span class="celeste"><br>¿Cuánto quieres ahorrar para conseguirlo?</span></h4>
+                        <input id="ex7" data-slider-id='ex1Slider' type="text" data-slider-min="50000" data-slider-max="10000000" data-slider-step="50000" data-slider-value="10000"/>
+                        <span id="ex7CurrentSliderValLabel" style="font-size: 18px;">monto: <span class="celeste">$ </span><span class="celeste" id="ex7SliderVal">50000</span></span>
+                     </div>
+                     <div class="animated zoomInDown">
+                        <h4><span class="celeste"><br>¿Cuál es tu perfil de inversionista? <small style="text-decoration:underline;" class="celeste">¿No estás seguro?</small></span></h4>
+                        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                           <div class="btn-group" role="group">
+                              <button type="button" onclick="setProfile('Perfil Conservador')" class="btn btn-default sinborde" data-toggle="tooltip" data-placement="top" title="Prefieres instrumentos de riesgo mínimo y rentabilidad esperada estable">Conservador</button>
+                           </div>
+                           <div class="btn-group" role="group">
+                              <button type="button" onclick="setProfile('Perfil Moderado')" class="btn btn-default sinborde" data-toggle="tooltip" data-placement="top" title="Prefieres invertir un monto menor en instrumentos que tengan una mayor volatilidad">Moderado</button>
+                           </div>
+                           <div class="btn-group" role="group">
+                              <button type="button" onclick="setProfile('Perfil Balanceado')" class="btn btn-default sinborde" data-toggle="tooltip" data-placement="top" title="Estás dispuesto a invertir equilibradamente con el fin de obtener una mayor rentabilidad sin tomar riesgos excesivos">Balanceado</button>
+                           </div>
+                           <div class="btn-group" role="group">
+                              <button type="button" onclick="setProfile('Perfil Agresivo')" class="btn btn-default sinborde" data-toggle="tooltip" data-placement="top" title="Estás dispuesto a aceptar variaciones del mercado, con el fin de obtener una mayor rentabilidad esperada en el largo plazo">Agresivo</button>
+                           </div>
+                           <div class="btn-group" role="group">
+                              <button type="button" onclick="setProfile('Perfil Arriesgado')" class="btn btn-default sinborde" data-toggle="tooltip" data-placement="top" title="Esperas obtener mayor rentabilidad en el largo plazo asumiendo un nivel de riesgo alto">Arriesgado</button>
+                           </div>
+                        </div><br>
+                     </div>
+                     <div class="animated zoomInDown slow">
+                        <div class="col-lg-4 col-lg-offset-4">
+                           <div class="btn-group btn-group-justified">
+                              <div class="btn-group" role="group">
+                                 <a onclick="getNextPage()"><button disabled id="show-results" type="button" class="btn btn-default conborde">Ver resultados</button></a>
+                              </div>
+                           </div>     
+                        </div> 
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- Bootstrap core JavaScript
+   ================================================== -->
+   <!-- Placed at the end of the document so the pages load faster -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+   <script src="js/bootstrap.min.js"></script>
+   <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+   <script src="js/vendor/holder.min.js"></script>
+   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+   <script src="js/ie10-viewport-bug-workaround.js"></script>
+   <!-- slider -->
+   <script type="text/javascript" src="js/bootstrap-slider.js"></script>
+
+   <script>
+      function setProfile(p) {
+         window.CyberLanding = window.CyberLanding || {};
+         window.CyberLanding.profile = p;
+         document.getElementById('show-results').disabled = false;
+      }
+
+      function getNextPage() {
+         //e.preventDefault();
+
+         var profile = window.CyberLanding.profile;
+         var months = parseInt(document.getElementById('ex6').value);
+         var amount = parseInt(document.getElementById('ex7').value);
+         //1 a 5 meses
+         if (
+            months >= 1 && months <= 5 &&
+            amount >= 50000 && amount <= 10000000 &&
+            profile === 'Perfil Conservador'  
+         ) {
+            window.location = `fondo-vision-money-market-cash.html?amount=${amount}&investorProfile=${profile}`;
+         }
+         else if ( 
+            months >= 1 && months <= 5 &&
+            amount >= 50000 && amount <= 10000000 &&
+            profile === 'Perfil Moderado' 
+         ) {
+            window.location = `fondo-vision-money-market-cash.html?amount=${amount}&investorProfile=${profile}`;
+         }
+         else if ( 
+            months >= 1 && months <= 5 &&
+            amount >= 50000 && amount <= 10000000 &&
+            profile === 'Perfil Balanceado'
+         ) {
+            window.location = `fondo-vision-money-market-cash.html?amount=${amount}&investorProfile=${profile}`;
+         }
+         else if ( 
+            months >= 1 && months <= 5 &&
+            amount >= 50000 && amount <= 10000000 &&
+            profile === 'Perfil Agresivo' 
+         ) {
+            window.location = `fondo-vision-money-market-cash.html?amount=${amount}&investorProfile=${profile}`;
+         }
+         else if ( 
+            months >= 1 && months <= 5 &&
+            amount >= 50000 && amount <= 10000000 &&
+            profile === 'Perfil Arriesgado' 
+         ) {
+            window.location = `fondo-vision-money-market-cash.html?amount=${amount}&investorProfile=${profile}`;
+         }
+         //6 a 11 meses
+         else if (
+            months >= 6 && months <= 11 &&
+            amount >= 50000 && amount <= 10000000 &&
+            profile === 'Perfil Conservador'  
+         ) {
+            window.location = `fondo-deuda-corto-plazo-lp180.html?amount=${amount}&investorProfile=${profile}`;
+         }
+         else if ( 
+            months >= 6 && months <= 11 &&
+            amount >= 50000 && amount <= 10000000 &&
+            profile === 'Perfil Moderado' 
+         ) {
+            window.location = `fondo-deuda-corto-plazo-lp180.html?amount=${amount}&investorProfile=${profile}`;
+         }
+         else if ( 
+            months >= 6 && months <= 11 &&
+            amount >= 50000 && amount <= 10000000 &&
+            profile === 'Perfil Balanceado'
+         ) {
+            window.location = `fondo-deuda-mediano-plazo-uf-lp180.html?amount=${amount}&investorProfile=${profile}`;
+         }
+         else if ( 
+            months >= 6 && months <= 11 &&
+            amount >= 50000 && amount <= 10000000 &&
+            profile === 'Perfil Agresivo' 
+         ) {
+            window.location = `fondo-deuda-mediano-plazo-uf-lp180.html?amount=${amount}&investorProfile=${profile}`;
+         }
+         else if ( 
+            months >= 6 && months <= 11 &&
+            amount >= 50000 && amount <= 10000000 &&
+            profile === 'Perfil Arriesgado' 
+         ) {
+            window.location = `fondo-deuda-mediano-plazo-uf-lp180.html?amount=${amount}&investorProfile=${profile}`;
+         }
+         //12 a 23 meses
+         else if (
+            months >= 12 && months <= 23 &&
+            amount >= 50000 && amount <= 10000000 &&
+            profile === 'Perfil Conservador'  
+         ) {
+            window.location = `fondo-cartera-defensiva-lp180.html?amount=${amount}&investorProfile=${profile}`;
+         }
+         else if ( 
+            months >= 12 && months <= 23 &&
+            amount >= 50000 && amount <= 10000000 &&
+            profile === 'Perfil Moderado' 
+         ) {
+            window.location = `fondo-cartera-defensiva-lp180.html?amount=${amount}&investorProfile=${profile}`;
+         }
+         else if ( 
+            months >= 12 && months <= 23 &&
+            amount >= 50000 && amount <= 10000000 &&
+            profile === 'Perfil Balanceado'
+         ) {
+            window.location = `fondo-cartera-defensiva-lp180.html?amount=${amount}&investorProfile=${profile}`;
+         }
+         else if ( 
+            months >= 12 && months <= 23 &&
+            amount >= 50000 && amount <= 10000000 &&
+            profile === 'Perfil Agresivo' 
+         ) {
+            window.location = `fondo-cartera-prudente-lp180.html?amount=${amount}&investorProfile=${profile}`;
+         }
+         else if ( 
+            months >= 12 && months <= 23 &&
+            amount >= 50000 && amount <= 10000000 &&
+            profile === 'Perfil Arriesgado' 
+         ) {
+            window.location = `fondo-cartera-prudente-lp180.html?amount=${amount}&investorProfile=${profile}`;
+         }
+      }
+      $(document).ready(function() {
+         //barra meses
+         // document.getElementById('ex6').value
+         $("#ex6").slider();
+         $("#ex6").on("slide", function(slideEvt) {
+            $("#ex6SliderVal").text(slideEvt.value);
+         });
+         //barra dinero
+         $("#ex7").slider();
+         $("#ex7").on("slide", function(slideEvt) {
+            $("#ex7SliderVal").text(slideEvt.value);
+         });
+      });
+   </script>
+   <script type="text/javascript">
+      $(function () {
+         $('[data-toggle="tooltip"]').tooltip()
+      })
+   </script>
+   <script src="js/wow.min.js"></script>
+   <script>
+      new WOW().init();
+   </script>
+</body>
+</html>

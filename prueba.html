@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> 
+   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <link rel="icon" href="../../favicon.ico">
+   <title>Home - Cybermonday 2019 Principal</title>
+   <!-- Bootstrap core CSS -->
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+   <link href="css/bootstrap-slider.css" rel="stylesheet">
+   <link href="css/style.css" rel="stylesheet">
+   <link href="css/animate.css"rel="stylesheet">
+</head>
+<body>
+   <!--carrusel-->
+   <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!--mini simulador-->
+      <div class="sobre">
+         <div class="container">
+            <div class="row">
+
+               <div class="col-lg-6">
+                  <h2 class="featurette-heading blanco animated fadeInDown text-center" style="margin-top: 60px;">Cuéntanos para qué quieres ahorrar</h2>
+                  <div class="animated fadeIn">
+                     <div class="fondosimulador">
+                      
+
+
+                      <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
+
+
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="js/vendor/holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="js/ie10-viewport-bug-workaround.js"></script>
+<!-- slider -->
+<script type="text/javascript" src="js/bootstrap-slider.js"></script>
+
+<script>
+   function setProfile(p) {
+      window.CyberLanding = window.CyberLanding || {};
+      window.CyberLanding.profile = p;
+      document.getElementById('show-results').disabled = false;
+   }
+   function getNextPage() {
+      //e.preventDefault();
+      var profile = window.CyberLanding.profile;
+      var months = parseInt(document.getElementById('ex6').value);
+      var amount = parseInt(document.getElementById('ex7').value);
+      //1 a 5 meses
+      if (
+         months >= 1 && months <= 5 &&
+         amount >= 10000 && amount <= 10000000 &&
+         profile === 'Perfil Conservador'  
+      ) {
+         window.location = `resultados-vision-mm-1-5.html?amount=${amount}&investorProfile=${profile}`;
+      }
+      else if ( 
+         months >= 1 && months <= 5 &&
+         amount >= 10000 && amount <= 10000000 &&
+         profile === 'Perfil Moderado' 
+      ) {
+         window.location = `resultados-vision-mm-1-5.html?amount=${amount}&investorProfile=${profile}`;
+      }
+      else if ( 
+         months >= 1 && months <= 5 &&
+         amount >= 10000 && amount <= 10000000 &&
+         profile === 'Perfil Balanceado'
+      ) {
+         window.location = `resultados-vision-mm-1-5.html?amount=${amount}&investorProfile=${profile}`;
+      }
+      else if ( 
+         months >= 1 && months <= 5 &&
+         amount >= 10000 && amount <= 10000000 &&
+         profile === 'Perfil Agresivo' 
+      ) {
+         window.location = `resultados-vision-mm-1-5.html?amount=${amount}&investorProfile=${profile}`;
+      }
+      else if ( 
+         months >= 1 && months <= 5 &&
+         amount >= 10000 && amount <= 10000000 &&
+         profile === 'Perfil Arriesgado' 
+      ) {
+         window.location = `resultados-vision-mm-1-5.html?amount=${amount}&investorProfile=${profile}`;
+      }
+      //6 a 11 meses
+      else if (
+         months >= 6 && months <= 11 &&
+         amount >= 10000 && amount <= 10000000 &&
+         profile === 'Perfil Conservador'  
+      ) {
+         window.location = `resultados-deuda-corto-plazo-lp180-6-11.html?amount=${amount}&investorProfile=${profile}`;
+      }
+      else if ( 
+         months >= 6 && months <= 11 &&
+         amount >= 10000 && amount <= 10000000 &&
+         profile === 'Perfil Moderado' 
+      ) {
+         window.location = `resultados-deuda-corto-plazo-lp180-6-11.html?amount=${amount}&investorProfile=${profile}`;
+      }
+      else if ( 
+         months >= 6 && months <= 11 &&
+         amount >= 10000 && amount <= 10000000 &&
+         profile === 'Perfil Balanceado'
+      ) {
+         window.location = `resultados-deuda-mediano-uf-lp180-6-11.html?amount=${amount}&investorProfile=${profile}`;
+      }
+      else if ( 
+         months >= 6 && months <= 11 &&
+         amount >= 10000 && amount <= 10000000 &&
+         profile === 'Perfil Agresivo' 
+      ) {
+         window.location = `resultados-deuda-mediano-uf-lp180-6-11.html?amount=${amount}&investorProfile=${profile}`;
+      }
+      else if ( 
+         months >= 6 && months <= 11 &&
+         amount >= 10000 && amount <= 10000000 &&
+         profile === 'Perfil Arriesgado' 
+      ) {
+         window.location = `resultados-deuda-mediano-uf-lp180-6-11.html?amount=${amount}&investorProfile=${profile}`;
+      }
+      //12 a 23 meses
+      else if (
+         months >= 12 && months <= 23 &&
+         amount >= 10000 && amount <= 10000000 &&
+         profile === 'Perfil Conservador'  
+      ) {
+         window.location = `resultados-cartera-defensiva-lp180-12-23.html?amount=${amount}&investorProfile=${profile}`;
+      }
+      else if ( 
+         months >= 12 && months <= 23 &&
+         amount >= 10000 && amount <= 10000000 &&
+         profile === 'Perfil Moderado' 
+      ) {
+         window.location = `resultados-cartera-defensiva-lp180-12-23.html?amount=${amount}&investorProfile=${profile}`;
+      }
+      else if ( 
+         months >= 12 && months <= 23 &&
+         amount >= 10000 && amount <= 10000000 &&
+         profile === 'Perfil Balanceado'
+      ) {
+         window.location = `resultados-cartera-defensiva-lp180-12-23.html?amount=${amount}&investorProfile=${profile}`;
+      }
+      else if ( 
+         months >= 12 && months <= 23 &&
+         amount >= 10000 && amount <= 10000000 &&
+         profile === 'Perfil Agresivo' 
+      ) {
+         window.location = `resultados-cartera-prudente-lp180-12-23.html?amount=${amount}&investorProfile=${profile}`;
+      }
+      else if ( 
+         months >= 12 && months <= 23 &&
+         amount >= 10000 && amount <= 10000000 &&
+         profile === 'Perfil Arriesgado' 
+      ) {
+         window.location = `resultados-cartera-prudente-lp180-12-23.html?amount=${amount}&investorProfile=${profile}`;
+      }
+      //24 a 36 meses
+      else if (
+         months >= 24 && months <= 36 &&
+         amount >= 10000 && amount <= 10000000 &&
+         profile === 'Perfil Conservador'  
+      ) {
+         window.location = `resultados-cartera-defensiva-lp180-24-36.html?amount=${amount}&investorProfile=${profile}`;
+      }
+      else if ( 
+         months >= 24 && months <= 36 &&
+         amount >= 10000 && amount <= 10000000 &&
+         profile === 'Perfil Moderado' 
+      ) {
+         window.location = `resultados-cartera-defensiva-lp180-24-36.html?amount=${amount}&investorProfile=${profile}`;
+      }
+      else if ( 
+         months >= 24 && months <= 36 &&
+         amount >= 10000 && amount <= 10000000 &&
+         profile === 'Perfil Balanceado'
+      ) {
+         window.location = `resultados-cartera-prudente-lp180-24-36.html?amount=${amount}&investorProfile=${profile}`;
+      }
+      else if ( 
+         months >= 24 && months <= 36 &&
+         amount >= 10000 && amount <= 10000000 &&
+         profile === 'Perfil Agresivo' 
+      ) {
+         window.location = `resultados-cartera-prudente-lp180-24-36.html?amount=${amount}&investorProfile=${profile}`;
+      }
+      else if ( 
+         months >= 24 && months <= 36 &&
+         amount >= 10000 && amount <= 10000000 &&
+         profile === 'Perfil Arriesgado' 
+      ) {
+         window.location = `resultados-cartera-equlibrada-lp180-24-36.html?amount=${amount}&investorProfile=${profile}`;
+      }
+      //37 a 59 meses
+      else if (
+         months >= 37 && months <= 59 &&
+         amount >= 10000 && amount <= 10000000 &&
+         profile === 'Perfil Conservador'  
+      ) {
+         window.location = `resultados-cartera-defensiva-lp3-37-59.html?amount=${amount}&investorProfile=${profile}`;
+      }
+      else if ( 
+         months >= 37 && months <= 59 &&
+         amount >= 10000 && amount <= 10000000 &&
+         profile === 'Perfil Moderado' 
+      ) {
+         window.location = `resultados-cartera-prudente-lp3-37-59.html?amount=${amount}&investorProfile=${profile}`;
+      }
+      else if ( 
+         months >= 37 && months <= 59 &&
+         amount >= 10000 && amount <= 10000000 &&
+         profile === 'Perfil Balanceado'
+      ) {
+         window.location = `resultados-cartera-equilibrada-lp3-37-59.html?amount=${amount}&investorProfile=${profile}`;
+      }
+      else if ( 
+         months >= 37 && months <= 59 &&
+         amount >= 10000 && amount <= 10000000 &&
+         profile === 'Perfil Agresivo' 
+      ) {
+         window.location = `resultados-cartera-equilibrada-lp3-37-59.html?amount=${amount}&investorProfile=${profile}`;
+      }
+      else if ( 
+         months >= 37 && months <= 59 &&
+         amount >= 10000 && amount <= 10000000 &&
+         profile === 'Perfil Arriesgado' 
+      ) {
+         window.location = `resultados-cartera-audaz-lp3-37-59.html?amount=${amount}&investorProfile=${profile}`;
+      }
+      //60 meses
+      else if (
+         months === 60 &&
+         amount >= 10000 && amount <= 10000000 &&
+         profile === 'Perfil Conservador'  
+      ) {
+         window.location = `resultados-cartera-defensiva-lp3-60.html?amount=${amount}&investorProfile=${profile}`;
+      }
+      else if ( 
+         months === 60 &&
+         amount >= 10000 && amount <= 10000000 &&
+         profile === 'Perfil Moderado' 
+      ) {
+         window.location = `resultados-cartera-prudente-lp3-60.html?amount=${amount}&investorProfile=${profile}`;
+      }
+      else if ( 
+         months === 60 &&
+         amount >= 10000 && amount <= 10000000 &&
+         profile === 'Perfil Balanceado'
+      ) {
+         window.location = `resultados-cartera-equilibrada-lp3-60.html?amount=${amount}&investorProfile=${profile}`;
+      }
+      else if ( 
+         months === 60 &&
+         amount >= 10000 && amount <= 10000000 &&
+         profile === 'Perfil Agresivo' 
+      ) {
+         window.location = `resultados-cartera-audaz-lp3-60.html?amount=${amount}&investorProfile=${profile}`;
+      }
+      else if ( 
+         months === 60 &&
+         amount >= 10000 && amount <= 10000000 &&
+         profile === 'Perfil Arriesgado' 
+      ) {
+         window.location = `resultados-cartera-audaz-lp3-60.html?amount=${amount}&investorProfile=${profile}`;
+      }
+   }
+   $(document).ready(function() {
+  
+
+  // With JQuery
+$('#ex1').slider({
+   formatter: function(value) {
+      return 'Current value: ' + value;
+   }
+});
+
+// Without JQuery
+var slider = new Slider('#ex1', {
+   formatter: function(value) {
+      return 'Current value: ' + value;
+   }
+});
+
+
+
+
+   });
+</script>
+<script type="text/javascript">
+   $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+   })
+</script>
+<script src="js/wow.min.js"></script>
+<script>
+   new WOW().init();
+</script>
+</body>
+</html>
